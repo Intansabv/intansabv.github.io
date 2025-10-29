@@ -1,47 +1,315 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact - Hubungi Saya</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Hubungi Saya</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <h2>Informasi Kontak</h2>
-        <p>Jika Anda ingin menghubungi saya, silakan gunakan informasi berikut:</p>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f7;
+    color: #333;
+    line-height: 1.6;
+}
 
-        <ul>
-            <li><b>Email:</b> intansabv@example.com</li>
-            <li><b>Instagram:</b> @intansabv</li>
-            <li><b>Alamat:</b> Indonesia</li>
-        </ul>
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.1);
+}
 
-        <h3>Form Kontak</h3>
-        <form action="#" method="post">
-            <label>Nama:</label><br>
-            <input type="text" name="nama" placeholder="Masukkan nama Anda"><br><br>
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-            <label>Email:</label><br>
-            <input type="email" name="email" placeholder="Masukkan email Anda"><br><br>
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
 
-            <label>Pesan:</label><br>
-            <textarea name="pesan" rows="5" placeholder="Tulis pesan Anda"></textarea><br><br>
+.nav-links {
+    display: flex;
+    list-style: none;
+}
 
-            <button type="submit">Kirim</button>
-        </form>
-    </main>
+.nav-links li {
+    margin-left: 25px;
+}
 
-    <footer>
-        <p>&copy; 2025 Intansabv</p>
-    </footer>
-</body>
-</html>
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff6b95;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.contact-section h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info h2 {
+    color: #ff6b95;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff9fb;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #ffeef2;
+    transform: translateX(5px);
+}
+
+.contact-item .icon {
+    font-size: 24px;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    border-radius: 50%;
+    color: white;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+}
+
+.contact-form h2 {
+    color: #ff6b95;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff6b95;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ffe4e9;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fff9fb;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff9a9e;
+    box-shadow: 0 0 0 3px rgba(255, 154, 158, 0.2);
+    background-color: white;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .contact-section h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Decorative Elements */
+.pink-blob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.blob-1 {
+    top: 10%;
+    left: 5%;
+    animation: float 7s ease-in-out infinite;
+}
+
+.blob-2 {
+    bottom: 10%;
+    right: 5%;
+    animation: float 9s ease-in-out infinite;
+    animation-delay: 1s;
+}
+       
